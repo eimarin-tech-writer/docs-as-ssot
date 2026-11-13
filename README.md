@@ -26,7 +26,7 @@ No Python? You can do everything with the agents, in any tool, and skip the scri
 | Practice source | `project/raw/nimbus-meeting.txt` | a fictional transcript with the traps of real meetings |
 | SSOT | `project/docs/ssot.*.md` | what an anchored claim looks like |
 | Specification | `project/docs/spec.template.md` | how to write what you want before generating |
-| Style guide | `project/docs/style-guide.md` | style as numbered, verifiable rules |
+| Style guide | `project/docs/style-guide.md` | a fictional content guide (Nimbus): voice, tone by moment, patterns, terms, 17 numbered rules |
 | Agents | `agents/` | paste-ready instructions: Extractor, Generator, Verifier, Spec author, Style checker |
 | QA | `qa/` | severity, finding card, tests, report |
 | Automatic verifier | `tools/check_ssot.py` | a rule that is enforced, not just written |
@@ -46,6 +46,7 @@ Each exercise is a ticket: a story, steps with a check after each one, and accep
 | `MIN-106` | at home | "A rule failed" | a rewritten rule + a second run |
 | `MIN-107` | 4 | "It doesn't sound the same every time" | `style-guide.md` + a style checker |
 | `MIN-108` | 4 | "Does it work on my work?" | the system run on your real source |
+| `MIN-109` | 4 or at home | "It's polite, but it doesn't sound like us" | your voice as testable rules and a tone-by-moment table |
 
 ## Your own case
 
