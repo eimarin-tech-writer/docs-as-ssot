@@ -1,79 +1,79 @@
-# Cum funcționează: zece minute
+# How this works: ten minutes
 
-## Bucla
+## The loop
 
-Orice lucru cu AI din repo merge în aceeași buclă:
+All AI work in this repo follows the same loop:
 
 ```
 Research → Write → Test → Score → Fix
 ```
 
-| Pas | Întrebarea | Unde în repo |
+| Step | The question | Where in the repo |
 |---|---|---|
-| Research | Ce spune sursa, de fapt? | `ssot.md` |
-| Write | Ce vreau exact și ce nu are voie să facă? | `spec.md`, `style-guide.md` |
-| Test | Ține regula când încerc s-o încalc? | `qa/tests.md` |
-| Score | Cât de grav e ce a picat? | `qa/severity.md` |
-| Fix | Ce rescriu și rulez iar? | regula, nu promptul |
+| Research | What does the source actually say? | `ssot.md` |
+| Write | What exactly do I want, and what must it not do? | `spec.md`, `style-guide.md` |
+| Test | Does the rule hold when I try to break it? | `qa/tests.md` |
+| Score | How serious is what failed? | `qa/severity.md` |
+| Fix | What do I rewrite and run again? | the rule, not the prompt |
 
-Cheia e a doua linie: repari **regula**, nu repeți promptul mai insistent. Mai mult interogat nu înseamnă mai bun.
+The key is the last line: you fix the **rule**, you do not repeat the prompt more insistently. Asking more does not mean asking better.
 
-## De ce SSOT
+## Why an SSOT
 
-Un model nu știe ce s-a spus într-o ședință. Are doar ce i-ai dat. Dacă nu îi dai o sursă și nu îl obligi să citeze din ea, completează golurile plauzibil. Asta se vede ca „halucinație", dar e un gol de sursă.
+A model does not know what was said in a meeting. It only has what you gave it. If you give it no source and don't force it to quote from it, it fills the gaps plausibly. That looks like a "hallucination", but it is a gap in the source.
 
-SSOT-ul e tabelul în care fiecare afirmație are:
+The SSOT is the table in which every claim has:
 
-- un **tip** (fapt, decizie, acțiune, întrebare deschisă, risc),
-- un **citat** care apare întocmai în sursă,
-- un **loc** unde îl găsești,
-- un **status**: verificat (citatul susține exact afirmația), dedus (susține parțial), neconfirmat (nu apare).
+- a **type** (fact, decision, action, open question, risk),
+- a **quote** that appears verbatim in the source,
+- a **location** where you can find it,
+- a **status**: verified (the quote supports exactly the claim), inferred (it supports it partly), unconfirmed (it does not appear).
 
-**Regula de podea:** ce nu poate fi urmărit până la sursă nu se afirmă.
+**The floor rule:** what cannot be traced to the source is not stated.
 
-## Cine generează nu verifică
+## Whoever generates does not verify
 
-Un model care își verifică propriul rezultat repetă aceeași greșeală. De aceea:
+A model that checks its own output repeats the same mistake. So:
 
-- **Generatorul** scrie.
-- **Verificatorul**, într-o conversație separată, primește sursa, rezultatul și criteriile, și scrie fișe de constatare.
-- **Scriptul** verifică ce se poate verifica fără model: citatele sunt reale, vorbitorii se potrivesc.
-- **Omul** decide.
+- The **Generator** writes.
+- The **Verifier**, in a separate conversation, receives the source, the output and the criteria, and writes finding cards.
+- The **script** checks what can be checked without a model: quotes are real, speakers match.
+- The **human** decides.
 
-Trei straturi, fiecare prinde altceva:
+Three layers, each catching something different:
 
-| Strat | Prinde | Nu prinde |
+| Layer | Catches | Does not catch |
 |---|---|---|
-| script | citat inventat, vorbitor greșit, ezitare devenită certitudine | sensul |
-| Verificator | discuție devenită decizie, cifră corectată mai târziu | ce nu i-ai spus să caute |
-| om | ce contează în context | ce nu citește |
+| script | invented quote, wrong speaker, a hedge turned into certainty | meaning |
+| Verifier | a discussion turned into a decision, a figure corrected later | what you didn't tell it to look for |
+| human | what matters in context | what they don't read |
 
-## Contractul unei specificații
+## The contract of a specification
 
-Un spec bun are șase câmpuri și fiecare regulă se verifică cu da/nu:
+A good spec has six fields, and each rule is verifiable with a yes or no:
 
-1. Intenție: cine citește și ce face cu rezultatul
-2. Intrări: ce surse sunt permise
-3. Ieșire: ce structură are rezultatul
-4. Reguli: G-01, G-02…
-5. Ce nu face, și ce oferă în loc
-6. Acceptare: când e gata
+1. Intent: who reads it and what they do with the result
+2. Inputs: which sources are allowed
+3. Output: what structure the result has
+4. Rules: G-01, G-02…
+5. What it does not do, and what it offers instead
+6. Acceptance: when it is done
 
-O regulă care nu se poate verifica cu da/nu e o dorință. O rescrii.
+A rule you cannot check with a yes or no is a wish. You rewrite it.
 
-## Severitate
+## Severity
 
-Gravitatea nu e cât de urât arată greșeala, ci ce se întâmplă cu cititorul care are încredere în text. **Eroarea tăcută e mai gravă decât cea vizibilă**: o decizie inventată trece neobservată, o eroare de format se vede.
+Severity is not how ugly the mistake looks; it is what happens to the reader who trusts the text. **A silent error is worse than a visible one**: an invented decision goes unnoticed, a formatting error is seen.
 
-## Glosar
+## Glossary
 
-| Termen | Înseamnă aici |
+| Term | Means here |
 |---|---|
-| SSOT | tabelul de afirmații ancorate în sursă |
-| Sursă | fișierul brut din `project/raw/` |
-| Agent | o conversație separată cu instrucțiuni proprii |
-| Generator | agentul care scrie |
-| Verificator | agentul care caută ce nu ține |
-| Guardrail | regulă care se și verifică |
-| Fișă de constatare | un rând de verdict: afirmație, sursă, dovadă, severitate, remediu |
-| Minuta de aur | rezultatul corect, scris de mână de tine, pe o sursă pe care o știi |
+| SSOT | the table of claims anchored in the source |
+| Source | the raw file in `project/raw/` |
+| Agent | a separate conversation with its own instructions |
+| Generator | the agent that writes |
+| Verifier | the agent that looks for what doesn't hold |
+| Guardrail | a rule that is also checked |
+| Finding card | one verdict row: claim, source, evidence, severity, remedy |
+| Golden output | the correct result, written by hand by you, on a source you know |

@@ -1,35 +1,35 @@
-# MIN-108: Demo, sistemul pe munca ta
+# MIN-108: Demo, the system on your work
 
-**Sesiune:** 4, a doua parte · **Durată:** 25 minute · **Starea ta:** „Merge pe munca mea?"
+**Session:** 4, second half · **Time:** 25 minutes · **Where you start:** "Does it work on my work?"
 
-## Povestea
+## The story
 
-Ai SSOT, spec și ghid. Le rulezi cap-coadă pe sursa ta și arăți ce a ieșit, inclusiv ce nu a mers.
+You have an SSOT, a spec and a guide. You run them end to end on your source and show what came out, including what didn't work.
 
-## Pași
+## Steps
 
-1. Ia sursa de la `MIN-104`, cu minuta de aur.
-2. Rulează lanțul:
+1. Take the source from `MIN-104`, with its golden output.
+2. Run the chain:
    1. Extractor → `ssot.md`
-   2. `check_ssot.py` (dacă sursa are timestamps)
-   3. Generator → rezultat în `project/output/`
-   4. Verificator pe rezultat
-   5. Corector de stil
-3. Compară rezultatul cu minuta de aur.
+   2. `check_ssot.py` (if the source has timestamps)
+   3. Generator → output in `project/output/`
+   4. Verifier on the output
+   5. Style checker
+3. Compare the result with the golden output.
 
-   **Ce vezi?**
-   - Zero critice, cel mult 2 ridicate → lanțul funcționează pe cazul tău.
-   - Critice → spune care, și ce regulă le-ar fi prins. Acesta e tot un rezultat bun.
-4. Pregătește 3 minute de prezentare: ce ai încercat, ce a prins sistemul, ce a ratat, ce faci săptămâna viitoare.
+   **What do you see?**
+   - Zero critical, at most 2 high → the chain works on your case.
+   - Criticals → say which ones, and which rule would have caught them. That is also a good result.
+4. Prepare 3 minutes of presentation: what you tried, what the system caught, what it missed, what you do next week.
 
-## Criterii de acceptare
+## Acceptance criteria
 
-- [ ] Lanțul complet rulat o dată
-- [ ] Rezultatul comparat cu minuta de aur
-- [ ] Un raport de conformitate
-- [ ] Trei minute de prezentare: ce a prins, ce a ratat, ce urmează
-- [ ] Un pas următor, unul singur, pe care îl faci în lucrul tău real
+- [ ] The full chain run once
+- [ ] The result compared with the golden output
+- [ ] A conformance report
+- [ ] Three minutes of presentation: what it caught, what it missed, what comes next
+- [ ] One next step, a single one, that you take in your real work
 
-## După mentorat
+## After the mentoring
 
-Păstrează repo-ul. Pune sursele tale în `project/raw/`, regulile tale în `spec.md` și `style-guide.md`, și rulează sistemul la fiecare livrabil nou.
+Keep the repo. Put your sources in `project/raw/`, your rules in `spec.md` and `style-guide.md`, and run the system on every new deliverable.

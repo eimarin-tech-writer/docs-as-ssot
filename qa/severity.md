@@ -1,25 +1,25 @@
-# Severitate
+# Severity
 
-Gravitatea răspunde la o singură întrebare: **ce se întâmplă cu cititorul care are încredere în text?** Nu cât de urât arată greșeala.
+Severity answers one question: **what happens to a reader who trusts this text?** Not how ugly the mistake looks.
 
-| Nivel | Definiție | Exemple în minute | Acțiune |
+| Level | Definition | Examples in minutes | Action |
 |---|---|---|---|
-| **critic** | Cititorul e indus în eroare fără să știe. | decizie sau cifră inventată; acțiune pe alt om; „s-a discutat" scris ca „s-a decis"; „cred că vineri" scris ca „termen: vineri" | Pică. Nu pleacă. |
-| **ridicat** | Se pierde o decizie sau o acțiune. Nimic fals, dar cineva nu află. | decizie sau acțiune din transcript lipsă din minută | Cel mult 2, cu condiții. |
-| **mediu** | Încrederea scade sau se pierde efort. Nimic fals. | context omis; termen inconsecvent; ton | Recomandare. |
-| **scăzut** | Cosmetic. | format, ordinea rândurilor | Notă. |
+| **critical** | The reader is misled without knowing it. | an invented decision or figure; an action on the wrong person; "we discussed" written as "we decided"; "I think Friday" written as "deadline: Friday" | Fail. Does not go out. |
+| **high** | A decision or an action is lost. Nothing is false, but someone doesn't find out. | a decision or action in the transcript that is missing from the minutes | At most 2, with conditions. |
+| **medium** | Trust drops or effort is wasted. Nothing is false. | omitted context; an inconsistent term; tone | Recommendation. |
+| **low** | Cosmetic. | formatting, row order | Note. |
 
-**Principiul:** eroarea tăcută bate eroarea vizibilă. O decizie inventată trece neobservată și se construiește pe ea. O eroare de format se vede imediat și paguba e mică.
+**The principle:** a silent error beats a visible one. An invented decision goes unnoticed and people build on it. A formatting error is seen immediately and the damage is small.
 
-## Decizia pe un rezultat
+## The decision on an output
 
-| Condiție | Decizie |
+| Condition | Decision |
 |---|---|
-| orice critic | **PICĂ** |
-| mai mult de 2 ridicate | **PICĂ** |
-| 1–2 ridicate | **TRECE CU CONDIȚII**: se repară înainte de folosire |
-| doar mediu și scăzut | **TRECE**, cu recomandări atașate |
+| any critical | **FAIL** |
+| more than 2 high | **FAIL** |
+| 1–2 high | **PASS WITH CONDITIONS**: fix before use |
+| only medium and low | **PASS**, with recommendations attached |
 
-## Pragurile sunt convenții
+## The thresholds are conventions
 
-Pragul „cel mult 2 ridicate" e o alegere rezonabilă de pornire, nu o valoare măsurată. După câteva ședințe îl poți ajusta pe cazul tău, dar îl schimbi cu o notă scrisă de ce.
+"At most 2 high" is a reasonable starting choice, not a measured value. After a few meetings you can adjust it for your case, but change it with a written note about why.

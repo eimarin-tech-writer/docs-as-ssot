@@ -1,61 +1,61 @@
-# Specificație: [numele livrabilului]
+# Specification: [name of the deliverable]
 
-O pagină. Dacă nu încape, e prea mult.
+One page. If it doesn't fit, it's too much.
 
-## 1. Intenție
+## 1. Intent
 
-Cine citește rezultatul și ce face cu el?
+Who reads the result and what do they do with it?
 
-> [de completat]
+> [to fill in]
 
-## 2. Intrări
+## 2. Inputs
 
-Ce surse sunt permise? Tot ce nu e aici nu intră.
+Which sources are allowed? Anything not listed here does not go in.
 
-> [de completat]
+> [to fill in]
 
-## 3. Ieșire
+## 3. Output
 
-Tip de document, secțiuni, lungime, format.
+Type of document, sections, length, format.
 
-> [de completat]
+> [to fill in]
 
-## 4. Reguli
+## 4. Rules
 
-Fiecare regulă se verifică cu da sau nu.
+Each rule is checkable with a yes or no.
 
-| Nr. | Regulă | Cum verifici |
+| No. | Rule | How to check |
 |---|---|---|
 | G-01 | | |
 | G-02 | | |
 
-## 5. Ce nu face
+## 5. What it does not do
 
-Ce refuză, și ce oferă în loc (motiv + alternativă).
+What it refuses, and what it offers instead (reason + alternative).
 
-> [de completat]
+> [to fill in]
 
-## 6. Acceptare
+## 6. Acceptance
 
-Când e gata?
+When is it done?
 
-> [de completat]
+> [to fill in]
 
 ---
 
-## Exemplu completat: minuta de ședință
+## A completed example: meeting minutes
 
-**1. Intenție.** Participanții la ședință citesc minuta ca să știe ce s-a decis și ce au de făcut.
-**2. Intrări.** Doar `project/docs/ssot.md` verificat. Nimic din memoria modelului.
-**3. Ieșire.** Secțiuni fixe: decizii, acțiuni, întrebări deschise, riscuri. Fiecare rând cu ID din SSOT.
-**5. Ce nu face.** Nu deduce decizii. Pentru ce nu e în SSOT răspunde „nu apare în sursă" și arată ce există.
-**6. Acceptare.** Zero critice, cel mult 2 ridicate, pe trei rulări.
+**1. Intent.** Meeting participants read the minutes to know what was decided and what they have to do.
+**2. Inputs.** Only the verified `project/docs/ssot.md`. Nothing from the model's memory.
+**3. Output.** Fixed sections: decisions, actions, open questions, risks. Every row carries an ID from the SSOT.
+**5. What it does not do.** It does not deduce decisions. For anything not in the SSOT it answers "not in the source" and shows what does exist.
+**6. Acceptance.** Zero critical, at most 2 high, over three runs.
 
-| Nr. | Regulă | Cum verifici |
+| No. | Rule | How to check |
 |---|---|---|
-| G-01 | Fiecare decizie, acțiune și întrebare are ID din SSOT. | număr rândurile fără ID |
-| G-02 | Responsabilul apare doar dacă e numit în SSOT; altfel „nenumit". | caută acțiuni cu nume fără sursă |
-| G-03 | Un termen apare doar dacă e spus explicit; „cred că" devine „probabil, de confirmat". | caută date și termene fără marcaj |
-| G-04 | „S-a decis" doar pentru rânduri de tip `decizie`. | verific fiecare „decis" pe tip |
-| G-05 | Nicio cifră sau nume de sistem care nu e în SSOT. | caută numerele în SSOT |
-| G-06 | Ce nu e în SSOT se spune „nu apare", nu se completează. | test de lipsă |
+| G-01 | Every decision, action and question has an ID from the SSOT. | count the rows without an ID |
+| G-02 | The owner appears only if named in the SSOT; otherwise "unnamed". | look for actions with a name that has no source |
+| G-03 | A deadline appears only if said explicitly; "I think", "maybe" become "probably, to be confirmed". | look for dates and deadlines with no marker |
+| G-04 | "Decided" only for rows of type `decision`. | check every "decided" against the type |
+| G-05 | No figure or system name that is not in the SSOT. | look the numbers up in the SSOT |
+| G-06 | What is not in the SSOT is stated as "not in the source", not filled in. | a test for the missing case |

@@ -1,63 +1,63 @@
-# Ghid de stil: minute de ședință
+# Style guide: meeting minutes
 
-Reguli numerotate, ca să poată fi citate de un om sau de un agent care verifică. Observația fără număr de regulă este o preferință: ori devine regulă, ori nu se raportează.
+Numbered rules, so that a person or an agent checking a text can cite them. An observation without a rule number is a preference: either it becomes a rule, or it is not reported.
 
-## Cui scriem
+## Who we write for
 
-Participanților la ședință și colegilor care n-au fost. Citesc rapid, caută ce s-a decis și ce au de făcut.
+Meeting participants and colleagues who were not there. They read fast and look for what was decided and what they have to do.
 
-## Voce
+## Voice
 
-| Minuta este | Minuta nu este |
+| The minutes are | The minutes are not |
 |---|---|
-| neutră: relatează, nu comentează | evaluativă („o idee excelentă") |
-| precisă: nume, date, sume exacte | vagă („curând", „câteva") |
-| prudentă: spune când ceva e nesigur | sigură pe lucruri neconfirmate |
+| neutral: they report, they don't comment | evaluative ("a great idea") |
+| precise: names, dates, exact amounts | vague ("soon", "a few") |
+| careful: they say when something is uncertain | confident about unconfirmed things |
 
-## Terminologie
+## Terminology
 
-Un concept, un singur termen.
+One concept, one term.
 
-| Folosește | Nu folosi | Înseamnă |
+| Use | Don't use | Means |
 |---|---|---|
-| decizie | hotărâre, concluzie | ceva stabilit explicit |
-| acțiune | task, sarcină, to-do | ceva de făcut, cu sau fără responsabil |
-| întrebare deschisă | pending, de discutat | ceva nehotărât |
-| risc | problemă, issue | ceva care ar putea merge prost |
-| responsabil | owner, asignat | persoana care face acțiunea |
-| nenumit | TBD, necunoscut | responsabil care nu a fost spus |
+| decision | resolution, conclusion | something explicitly settled |
+| action | task, to-do, ticket | something to be done, with or without an owner |
+| open question | pending, to discuss | something not yet decided |
+| risk | issue, problem | something that could go wrong |
+| owner | assignee, responsible | the person who does the action |
+| unnamed | TBD, unknown | an owner who was not said |
 
-## Structura minutei
+## Structure of the minutes
 
-Aceleași secțiuni, în aceeași ordine:
+The same sections, in the same order:
 
-1. **Decizii**
-2. **Acțiuni**
-3. **Întrebări deschise**
-4. **Riscuri**
-5. **De confirmat** (rândurile `dedus` sau `neconfirmat`)
+1. **Decisions**
+2. **Actions**
+3. **Open questions**
+4. **Risks**
+5. **To be confirmed** (rows that are `inferred` or `unconfirmed`)
 
-Fiecare rând: o propoziție, cu ID-ul din SSOT în paranteză. Acțiunile arată așa: `Responsabil: acțiune. Termen. (M-08)`.
+Every row: one sentence, with the ID from the SSOT in parentheses. Actions look like this: `Owner: action. Deadline. (M-08)`.
 
-## Reguli
+## Rules
 
-| Nr. | Regulă | Cum verifici |
+| No. | Rule | How to check |
 |---|---|---|
-| R-01 | Folosește doar termenii din coloana „Folosește". | caută termenii interziși |
-| R-02 | Cel mult 20 de cuvinte într-o propoziție. | numără |
-| R-03 | Un rând = o singură decizie sau acțiune. | numără verbele de acțiune |
-| R-04 | Acțiunea începe cu numele responsabilului sau cu „Nenumit:". | citește începutul rândului |
-| R-05 | Fiecare rând are ID din SSOT. | caută rânduri fără ID |
-| R-06 | Fără adjective evaluative: „excelent", „important", „din păcate". | caută |
-| R-07 | Date cu luna în litere (14 decembrie); ore în format 24h (10:00). | caută „12/14", „AM", „PM" |
-| R-08 | Incertitudinea se marchează: „probabil", „de confirmat". | caută termene fără marcaj, cu sursă ezitantă |
-| R-09 | Diacritice, mereu. | caută cuvinte fără ele |
-| R-10 | Minuta se termină cu data următoarei ședințe, dacă a fost spusă. | citește ultimul rând |
+| R-01 | Use only the terms in the "Use" column. | look for the forbidden terms |
+| R-02 | At most 20 words in a sentence. | count |
+| R-03 | One row = one decision or action. | count the action verbs |
+| R-04 | An action starts with the owner's name or with "Unnamed:". | read the start of the row |
+| R-05 | Every row has an ID from the SSOT. | look for rows without an ID |
+| R-06 | No evaluative adjectives or adverbs: "great", "important", "unfortunately". | search |
+| R-07 | Dates with the month in letters (December 14); times in 24h format (10:00). | look for "12/14", "AM", "PM" |
+| R-08 | Uncertainty is marked: "probably", "to be confirmed". | look for deadlines with a hedged source and no marker |
+| R-09 | Names and terms are written as in the source (PDF, not pdf). | compare with the source |
+| R-10 | The minutes end with the date of the next meeting, if it was said. | read the last row |
 
-## Corect / greșit
+## Right / wrong
 
-| Greșit | Corect | Regulă |
+| Wrong | Right | Rule |
 |---|---|---|
-| „Ioana va rezolva rotunjirile până vineri." | „Ioana: închide erorile de rotunjire. Probabil vineri, de confirmat. (M-04)" | R-04, R-08 |
-| „Task: trimitere estimare — TBD" | „Nenumit: trimite estimarea către client. (M-06)" | R-01, R-04 |
-| „Echipa a decis să mute lansarea." | „Întrebare deschisă: mutarea lansării pe 21 decembrie nu e decisă. (M-03)" | R-01 |
+| "Nora will fix the rounding bugs by Friday." | "Nora: close the rounding bugs. Probably Friday, to be confirmed. (M-04)" | R-04, R-08 |
+| "Task: send estimate — TBD" | "Unnamed: send the estimate to the client. (M-06)" | R-01, R-04 |
+| "The team decided to move the launch." | "Open question: moving the launch to December 21 is not decided. (M-03)" | R-01 |

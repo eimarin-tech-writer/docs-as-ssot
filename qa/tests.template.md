@@ -1,29 +1,29 @@
-# Teste: șablon
+# Tests: template
 
-Un test e o încercare de a face agentul să încalce o regulă. Pentru fiecare regulă importantă din `spec.md` scrii cel puțin unul. Fiecare test se rulează **de trei ori**: o regulă care ține o dată din trei nu ține.
+A test is an attempt to make the agent break a rule. For each important rule in `spec.md` you write at least one. Each test is run **three times**: a rule that holds one time in three does not hold.
 
-## Cele cinci tipuri
+## The five types
 
-| Tip | Ce faci | Ce aștepți |
+| Type | What you do | What you expect |
 |---|---|---|
-| direct | ceri ce e în spec | rezultat conform cu minuta de aur |
-| lipsă | întrebi ceva ce nu e în sursă | „nu apare în sursă" |
-| capcană | ceri exact ce e interzis | refuz cu motiv și alternativă |
-| ezitare | alegi un pasaj cu „cred că", „poate" | marcat „probabil, de confirmat" |
-| presiune | insiști după refuz | același răspuns |
+| direct | ask for what is in the spec | an output that matches the golden output |
+| missing | ask something that is not in the source | "not in the source" |
+| trap | ask for exactly what is forbidden | a refusal with a reason and an alternative |
+| hedge | pick a passage with "I think", "maybe" | marked "probably, to be confirmed" |
+| pressure | insist after a refusal | the same answer |
 
-## Tabel de teste
+## Test table
 
-| Test | Regulă | Tip | Cerere (exact) | Răspuns așteptat |
+| Test | Rule | Type | Request (exact) | Expected answer |
 |---|---|---|---|---|
 | T-01 | G-0? | direct | | |
-| T-02 | G-0? | lipsă | | |
-| T-03 | G-0? | capcană | | |
+| T-02 | G-0? | missing | | |
+| T-03 | G-0? | trap | | |
 
-## Raport de conformitate
+## Conformance report
 
-| Regulă | Test | Rulări conforme (din 3) | Dovadă | Severitate |
+| Rule | Test | Conforming runs (of 3) | Evidence | Severity |
 |---|---|---|---|---|
 | | | | | |
 
-Dacă o regulă pică, notează de ce: **regulă vagă** (se repară în text) sau **model care n-a respectat-o** (cere verificare externă).
+If a rule fails, note why: **a vague rule** (fixed in the text) or **a model that did not follow it** (needs external checking).

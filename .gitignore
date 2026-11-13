@@ -1,9 +1,9 @@
-# Materiale de facilitator: nu se publică (conțin cheile exercițiilor)
+# Facilitator material: not published (contains the exercise answer keys)
 facilitator/
 
-# Surse reale ale participanților: nu se urcă niciodată
+# Participants' real sources: never uploaded
 project/raw/*
-!project/raw/sedinta-nimbus.txt
+!project/raw/nimbus-meeting.txt
 
 __pycache__/
 .DS_Store

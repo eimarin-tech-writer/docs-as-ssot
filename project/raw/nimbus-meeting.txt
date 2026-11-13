@@ -1,0 +1,28 @@
+[00:00:05] Alex: Okay, let's get started. On the agenda: the billing module launch, the estimate, and testing.
+[00:00:21] Sara: I updated the requirements yesterday, they're in the shared folder.
+[00:00:40] Nora: Sorry I'm late, my internet went down at home.
+[00:01:02] Chris: On my side, the payment integration is roughly eighty percent done.
+[00:01:30] Nora: The regression tests have been running since Monday, but we have two open bugs on rounding.
+[00:02:10] Alex: About the launch date. It's December 14 right now. Chris, will we make it?
+[00:02:25] Chris: I think so, but it depends on the rounding bugs.
+[00:03:01] Alex: Okay. Nora, when can you close the rounding bugs?
+[00:03:12] Nora: I think by Friday, but no promises.
+[00:03:40] Sara: I'd propose moving the launch to December 21, so we have some buffer.
+[00:04:05] Chris: I could move it, but I don't think we need to.
+[00:04:30] Alex: Let's not decide now. We'll look again once Nora closes the bugs.
+[00:05:02] Alex: Something else: the estimate for phase two. Somebody should send the estimate to the client.
+[00:05:20] Sara: I can't do it this week.
+[00:05:30] Chris: Me neither.
+[00:05:41] Alex: Okay, so who sends it stays open.
+[00:06:15] Nora: One more thing: the test environment has copied production data, I don't think it should.
+[00:06:40] Alex: Right, that's a risk. Nora, please note it down.
+[00:07:10] Chris: The testing budget was 20k, no, 25k.
+[00:07:35] Alex: Yes, 25k, confirmed.
+[00:07:55] Alex: Decided: the test report goes to the client as a PDF, not Excel.
+[00:08:05] Chris: Okay, we'll prepare the PDF.
+[00:08:20] Sara: I'll send the updated requirements list to everyone on Monday.
+[00:08:35] Alex: Perfect. Next meeting is Thursday at ten.
+[00:08:50] Alex: Thanks everyone, closing now.
+[00:09:05] Thank you.
+[00:09:07] Thank you.
+[00:09:09] Thank you.

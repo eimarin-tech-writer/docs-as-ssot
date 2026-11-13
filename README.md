@@ -1,79 +1,79 @@
-# Documentație ca SSOT: un sistem de lucru cu AI care rămâne în sursă
+# Docs as SSOT: working with AI so it stays in the source
 
-Repo de lucru pentru mentoratul **Get AI Conversations Right** (Product Makers Romania). Nu e un tutorial. E un proiect mic, cu reguli, agenți, teste și un verificator care rulează, pe care îl clonezi, îl folosești în fiecare sesiune și îl iei cu tine.
+A working repo for the mentoring track **Get AI Conversations Right** (Product Makers Romania). It is not a tutorial. It is a small project with rules, agents, tests and a verifier that actually runs. You clone it, use it in every session, and keep it.
 
-Ideea: AI-ul scrie bine, dar inventează, interpretează și uită instrucțiuni. În loc să verifici tot de mână, **ancorezi** rezultatul într-o sursă unică de adevăr (SSOT), **scrii dinainte** ce vrei, **testezi** că regulile țin și **separi** cine generează de cine verifică.
+The idea: AI writes well, but it invents, interprets and forgets instructions. Instead of checking everything by hand, you **anchor** the output in a single source of truth (SSOT), **write down in advance** what you want, **test** that your rules hold, and **separate** who generates from who verifies.
 
-**Pentru cine e:** oameni care folosesc deja AI la muncă și vor să aibă încredere în ce iese. Nu cere cod. Cere Python 3 pentru un singur script.
+**Who it's for:** people who already use AI at work and want to be able to trust what comes out. No coding required. It needs Python 3 for a single script.
 
-## Pornire
+## Quickstart
 
 ```
 git clone https://github.com/eimarin-tech-writer/docs-as-ssot.git
 cd docs-as-ssot
-python3 tools/check_ssot.py project/docs/ssot.exemplu.md project/raw/sedinta-nimbus.txt
+python3 tools/check_ssot.py project/docs/ssot.example.md project/raw/nimbus-meeting.txt
 ```
 
-Dacă vezi `Verdict: TRECE`, ești gata. Apoi deschide `exercises/MIN-101-pornire.md`.
+If you see `Verdict: PASS`, you are ready. Then open `exercises/MIN-101-setup.md`.
 
-Fără Python? Poți face tot cu agenții, în orice unealtă, și sari peste script. Pierzi garanția deterministă a verificării de citate, deci rulează Verificatorul cu mai multă atenție. Vezi `docs/tools.md`.
+No Python? You can do everything with the agents, in any tool, and skip the script. You lose the deterministic quote check, so run the Verifier with extra care. See `docs/tools.md`.
 
-## Ce e în repo
+## What's inside
 
-| Piesă | Unde | Ce te învață |
+| Piece | Where | What it teaches |
 |---|---|---|
-| Regula proiectului | `AGENTS.md` | ce nu are voie să uite niciun agent |
-| Sursa de exercițiu | `project/raw/sedinta-nimbus.txt` | transcript fictiv, cu capcanele din ședințele reale |
-| SSOT | `project/docs/ssot.*.md` | cum arată o afirmație ancorată |
-| Specificație | `project/docs/spec.template.md` | cum scrii ce vrei, înainte de generare |
-| Ghid de stil | `project/docs/style-guide.md` | stil ca reguli numerotate, verificabile |
-| Agenți | `agents/` | instrucțiuni gata de lipit pentru Extractor, Generator, Verificator, Autor de spec, Corector de stil |
-| QA | `qa/` | severitate, fișă de constatare, teste, raport |
-| Verificator automat | `tools/check_ssot.py` | regula impusă, nu doar scrisă |
-| Exerciții | `exercises/` | un tichet per pas, cu criterii de acceptare |
+| Project rule | `AGENTS.md` | what no agent may forget |
+| Practice source | `project/raw/nimbus-meeting.txt` | a fictional transcript with the traps of real meetings |
+| SSOT | `project/docs/ssot.*.md` | what an anchored claim looks like |
+| Specification | `project/docs/spec.template.md` | how to write what you want before generating |
+| Style guide | `project/docs/style-guide.md` | style as numbered, verifiable rules |
+| Agents | `agents/` | paste-ready instructions: Extractor, Generator, Verifier, Spec author, Style checker |
+| QA | `qa/` | severity, finding card, tests, report |
+| Automatic verifier | `tools/check_ssot.py` | a rule that is enforced, not just written |
+| Exercises | `exercises/` | one ticket per step, with acceptance criteria |
 
-## Exercițiile
+## The exercises
 
-Fiecare exercițiu e un tichet: o poveste, pași cu verificare după fiecare, criterii de acceptare. Lucrul e gata când toate criteriile sunt îndeplinite.
+Each exercise is a ticket: a story, steps with a check after each one, and acceptance criteria. The work is done when every criterion is met.
 
-| Tichet | Sesiune | Starea din care pleci | Ce produci |
+| Ticket | Session | Where you start | What you produce |
 |---|---|---|---|
-| `MIN-101` | 1 | „Merge setup-ul?" | verificator rulat pe exemplu |
-| `MIN-102` | 2 | „Nu am încredere în ce iese" | `ssot.md` din transcript |
-| `MIN-103` | 2 | „Cum prind ce n-am văzut?" | fișe de constatare pe un SSOT plantat |
-| `MIN-104` | acasă | „Cum arată documentul perfect?" | sursa ta + minuta de aur |
-| `MIN-105` | 3 | „Face altceva decât am cerut" | `spec.md` + `tests.md` + raport |
-| `MIN-106` | acasă | „O regulă a picat" | regulă rescrisă + a doua rulare |
-| `MIN-107` | 4 | „Nu sună la fel de fiecare dată" | `style-guide.md` + corector |
-| `MIN-108` | 4 | „Merge pe munca mea?" | sistemul rulat pe sursa ta reală |
+| `MIN-101` | 1 | "Does my setup work?" | the verifier run on the example |
+| `MIN-102` | 2 | "I don't trust what comes out" | an `ssot.md` from the transcript |
+| `MIN-103` | 2 | "How do I catch what I didn't see?" | findings on a planted SSOT |
+| `MIN-104` | at home | "What does the perfect document look like?" | your source + a golden output |
+| `MIN-105` | 3 | "It does something other than what I asked" | `spec.md` + `tests.md` + report |
+| `MIN-106` | at home | "A rule failed" | a rewritten rule + a second run |
+| `MIN-107` | 4 | "It doesn't sound the same every time" | `style-guide.md` + a style checker |
+| `MIN-108` | 4 | "Does it work on my work?" | the system run on your real source |
 
-## Cazul tău
+## Your own case
 
-Sesiunile se fac pe ședința demo, ca toți să vadă același lucru. Temele (`MIN-104`, `MIN-108`) le faci pe sursa ta. Ce se schimbă:
+Sessions use the demo meeting so everyone sees the same thing. The homework tickets (`MIN-104`, `MIN-108`) use your own source. What changes:
 
-| Sursa ta | „Citat" înseamnă | „Loc" înseamnă | Regulă de pornit |
+| Your source | "Quote" means | "Location" means | A rule to start with |
 |---|---|---|---|
-| transcript de ședință | replica | `hh:mm:ss` | responsabilul apare doar dacă e numit |
-| capitol de curs sau carte | fraza | pagina | niciun articol sau definiție din afara textului |
-| material de training | fraza sau obiectivul | modul sau slide | nu adăuga module necerute |
-| documentație de produs (câmpuri, API) | definiția | câmp sau versiune | termenii vin doar din glosar |
+| meeting transcript | the line | `hh:mm:ss` | the owner appears only if named |
+| course chapter or book | the sentence | the page | no article or definition from outside the text |
+| training material | the sentence or objective | module or slide | do not add modules nobody asked for |
+| product documentation (fields, API) | the definition | field or version | terms come only from the glossary |
 
-Scriptul `check_ssot.py` citește transcripturi cu `[hh:mm:ss]`. Pentru alte surse adaptezi expresia `LINIE` din script sau folosești doar Verificatorul; `MIN-104` explică.
+`check_ssot.py` reads transcripts with `[hh:mm:ss]`. For other sources you adapt the `LINE` expression in the script or use only the Verifier; `MIN-104` explains.
 
-## Cum folosești mai multe unelte
+## Using several tools
 
-Nu contează dacă lucrezi în Claude, ChatGPT, Gemini sau Copilot. „Agent" înseamnă o conversație separată, cu instrucțiunile din `agents/` lipite la început. Cine generează nu verifică, așa că folosești două conversații, fie în aceeași unealtă, fie în unelte diferite. Detalii în `docs/tools.md`.
+It does not matter whether you work in Claude, ChatGPT, Gemini or Copilot. An "agent" is a separate conversation with the instructions from `agents/` pasted at the start. Whoever generates does not verify, so you use two conversations, in the same tool or in different ones. Details in `docs/tools.md`.
 
-## Ce NU face sistemul
+## What the system does NOT do
 
-- Nu garantează că un model respectă o regulă. O regulă scrisă e o cerință. De aceea există teste, trei rulări și verificator.
-- Scriptul nu înțelege sensul. Prinde un citat inventat, nu prinde o discuție transformată în decizie.
-- Nu repară surse proaste. Dacă sursa e un e-mail pe care nu îl fixezi nicăieri, SSOT-ul nu are din ce să se hrănească.
+- It does not guarantee a model follows a rule. A written rule is a request. That is why there are tests, three runs and a verifier.
+- The script does not understand meaning. It catches an invented quote; it does not catch a discussion turned into a decision.
+- It does not fix bad sources. If your source is an email you never file anywhere, the SSOT has nothing to feed on.
 
-## Cum se citește mai departe
+## Read next
 
-Începe cu `docs/how-this-works.md` (zece minute, o buclă, un glosar).
+Start with `docs/how-this-works.md` (ten minutes, one loop, a glossary).
 
-## Licență
+## License
 
-MIT, vezi `LICENSE`. Copyright © 2026 Eliza Marin. Poți folosi, copia și adapta liber; păstrează nota de copyright.
+MIT, see `LICENSE`. Copyright © 2026 Eliza Marin. You may use, copy and adapt it freely; keep the copyright notice.

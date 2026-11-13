@@ -1,34 +1,34 @@
-# Fișa de constatare
+# The finding card
 
-Același format în toate sesiunile, pentru că verificatorul (agent sau om) raportează la fel mereu.
-
-```
-afirmație:  textul în cauză
-sursă:      loc + citat scurt, sau „nu există"
-dovadă:     ce am comparat
-severitate: critic | ridicat | mediu | scăzut
-remediu:    un singur pas concret
-```
-
-## Exemplu bun
+The same format in every session, so the verifier (agent or human) always reports the same way.
 
 ```
-afirmație:  M-04: „Ioana închide erorile de rotunjire până vineri" (verificat)
-sursă:      00:03:12, „Cred că până vineri, dar nu garantez"
-dovadă:     citatul conține ezitare („cred că") și o rezervă („nu garantez");
-            afirmația le-a transformat în termen sigur
-severitate: critic
-remediu:    status „dedus", afirmație: „Ioana estimează vineri, fără garanție"
+claim:      the text in question
+source:     location + short quote, or "none"
+evidence:   what I compared
+severity:   critical | high | medium | low
+remedy:     one concrete step
 ```
 
-## Exemplu prost
+## A good example
 
 ```
-afirmație:  M-04
-sursă:      —
-dovadă:     nu sună bine
-severitate: mediu
-remediu:    verifică
+claim:      M-04: "Nora closes the rounding bugs by Friday" (verified)
+source:     00:03:12, "I think by Friday, but no promises"
+evidence:   the quote contains a hedge ("I think") and a reservation ("no promises");
+            the claim turned them into a firm deadline
+severity:   critical
+remedy:     status "inferred", claim: "Nora estimates Friday, with no guarantee"
 ```
 
-Fără sursă și fără dovadă, fișa nu e o constatare. E o părere.
+## A bad example
+
+```
+claim:      M-04
+source:     —
+evidence:   doesn't sound right
+severity:   medium
+remedy:     check it
+```
+
+Without a source and without evidence, the card is not a finding. It is an opinion.

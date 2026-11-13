@@ -1,41 +1,41 @@
-# AGENTS.md: regulile proiectului
+# AGENTS.md: project rules
 
-Citește fișierul ăsta înaintea oricărei sarcini. Se aplică oricărui agent, în orice unealtă.
+Read this file before any task. It applies to every agent, in every tool.
 
-## Regula de aur
+## The golden rule
 
-**Nicio afirmație fără sursă.** Orice decizie, acțiune, cifră sau nume din rezultat trimite la un loc din `project/raw/`, cu un citat care apare întocmai acolo. Ce nu poate fi urmărit nu se afirmă. Se scrie „nu apare în sursă".
+**No claim without a source.** Every decision, action, figure or name in the output points to a place in `project/raw/`, with a quote that appears there verbatim. What cannot be traced is not stated. You write "not in the source".
 
-## Unde stau lucrurile
+## Where things live
 
-| Folder | Conține | Cine scrie |
+| Folder | Contains | Who writes |
 |---|---|---|
-| `project/raw/` | sursele brute (transcript, document) | omul, niciodată un agent |
-| `project/docs/` | `ssot.md`, `spec.md`, `style-guide.md` | omul, cu agenți |
-| `project/output/` | livrabile (minute, materiale) | agentul Generator |
-| `qa/` | severitate, fișe de constatare, teste, rapoarte | Verificatorul și omul |
-| `agents/` | instrucțiunile fiecărui agent | omul |
+| `project/raw/` | raw sources (transcript, document) | the human, never an agent |
+| `project/docs/` | `ssot.md`, `spec.md`, `style-guide.md` | the human, with agents |
+| `project/output/` | deliverables (minutes, materials) | the Generator agent |
+| `qa/` | severity, finding cards, tests, reports | the Verifier and the human |
+| `agents/` | the instructions for each agent | the human |
 
-## Reguli de lucru
+## Working rules
 
-1. **Cine generează nu verifică.** Generatorul și Verificatorul sunt conversații separate. Verificatorul primește sursa, rezultatul și criteriile, nu și raționamentul Generatorului.
-2. **Intrările sunt cele atașate.** Nimic din memoria modelului, nimic din alte ședințe sau documente care nu sunt în `project/raw/`.
-3. **Ezitarea rămâne ezitare.** „Cred că vineri" nu devine „termen: vineri". Se scrie „probabil vineri, de confirmat".
-4. **Discuția nu e decizie.** „S-a decis" doar dacă cineva a hotărât explicit.
-5. **Responsabilul apare doar dacă e numit.** Altfel: „nenumit".
-6. **Omul decide.** Fișele de constatare informează decizia, nu o iau.
+1. **Whoever generates does not verify.** The Generator and the Verifier are separate conversations. The Verifier receives the source, the output and the criteria, not the Generator's reasoning.
+2. **Inputs are what is attached.** Nothing from the model's memory, nothing from other meetings or documents that are not in `project/raw/`.
+3. **A hedge stays a hedge.** "I think Friday" does not become "deadline: Friday". Write "probably Friday, to be confirmed".
+4. **A discussion is not a decision.** "Decided" only if someone explicitly decided.
+5. **The owner appears only if named.** Otherwise: "unnamed".
+6. **The human decides.** Finding cards inform the decision; they do not make it.
 
-## Regula impusă (nu doar scrisă)
+## The enforced rule (not just written)
 
-`tools/check_ssot.py` verifică orice `ssot.md`: citatul apare întocmai pe linia citată, vorbitorul și responsabilul se potrivesc, ezitarea nu devine certitudine. Rulează-l după fiecare extragere. Dacă pică, nu mergi mai departe.
+`tools/check_ssot.py` checks any `ssot.md`: the quote appears verbatim on the cited line, the speaker and owner match, a hedge does not become certainty. Run it after every extraction. If it fails, do not go further.
 
-Scriptul verifică prezența și potrivirea, nu sensul. Sensul îl verifică agentul Verificator, iar decizia finală e a omului.
+The script checks presence and match, not meaning. The Verifier agent checks meaning, and the final decision is the human's.
 
-## Severitate (rezumat; detalii în `qa/severity.md`)
+## Severity (summary; details in `qa/severity.md`)
 
-| Nivel | Când | Decizie |
+| Level | When | Decision |
 |---|---|---|
-| critic | cititorul e indus în eroare fără să știe | pică |
-| ridicat | se pierde o decizie sau o acțiune | cel mult 2, cu condiții |
-| mediu | formulare, ton, structură | recomandare |
-| scăzut | cosmetic | notă |
+| critical | the reader is misled without knowing it | fail |
+| high | a decision or an action is lost | at most 2, with conditions |
+| medium | wording, tone, structure | recommendation |
+| low | cosmetic | note |

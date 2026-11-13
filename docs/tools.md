@@ -1,24 +1,24 @@
-# Unelte: cum ții doi agenți în orice AI
+# Tools: running two agents in any AI
 
-„Agent" aici înseamnă o **conversație separată**, cu fișierele din `agents/` lipite la început și sursa atașată. Atât. Merge oriunde.
+An "agent" here means a **separate conversation**, with a file from `agents/` pasted at the start and the source attached. That's all. It works anywhere.
 
-Numele exacte ale funcțiilor (proiecte, Gem-uri, GPT-uri, agenți) se schimbă des și diferă pe abonament. Tabelul de mai jos e un punct de pornire; verifică ce are contul tău.
+The exact names of features (projects, Gems, GPTs, agents) change often and differ by plan. The table below is a starting point; check what your account has.
 
-| Unealtă | Generator | Verificator | Unde țin fișierele |
+| Tool | Generator | Verifier | Where files live |
 |---|---|---|---|
-| Claude | un Project cu `agents/generator.md`, `spec.md`, `style-guide.md` în knowledge | alt Project sau conversație nouă, doar cu sursa, rezultatul și criteriile | în Project |
-| ChatGPT | un Project sau un GPT propriu | o conversație nouă, în afara proiectului | în Project |
-| Gemini | un Gem cu instrucțiunile | o conversație nouă, fără Gem | atașate la Gem |
-| Copilot | un agent sau o conversație cu instrucțiunile lipite | o conversație nouă | atașate în conversație |
+| Claude | a Project with `agents/generator.md`, `spec.md`, `style-guide.md` in its knowledge | another Project or a new conversation, with only the source, the output and the criteria | in the Project |
+| ChatGPT | a Project or a custom GPT | a new conversation, outside the project | in the Project |
+| Gemini | a Gem with the instructions | a new conversation, without the Gem | attached to the Gem |
+| Copilot | an agent or a conversation with the instructions pasted | a new conversation | attached in the conversation |
 
-## Reguli valabile peste tot
+## Rules that hold everywhere
 
-1. **Două conversații, nu una.** Generatorul nu vede ce gândește Verificatorul și invers.
-2. **Sursa o atașezi, nu o rezumi.** Dacă nu poți atașa, o lipești întreagă.
-3. **Instrucțiunile sunt fișierele din `agents/`**, lipite așa cum sunt. Nu le rescrie din memorie.
-4. **Dacă folosești mai multe unelte, alege roluri, nu comparații.** O unealtă generează, alta verifică, o singură trecere, criterii fixe, fișă la final. Dacă te prinzi că rulezi același prompt în patru locuri și compari, ai ieșit din sistem.
-5. **Datele de la job rămân în contul de la job.** Înainte să pui un transcript într-un cont personal, verifică politica angajatorului.
+1. **Two conversations, not one.** The Generator does not see what the Verifier thinks, and the other way round.
+2. **Attach the source; don't summarize it.** If you can't attach, paste it whole.
+3. **The instructions are the files in `agents/`**, pasted as they are. Don't rewrite them from memory.
+4. **If you use several tools, choose roles, not comparisons.** One tool generates, another verifies, in a single pass, with fixed criteria and a card at the end. If you catch yourself running the same prompt in four places and comparing, you have left the system.
+5. **Work data stays in the work account.** Before you put a transcript in a personal account, check your employer's policy.
 
-## Fără Python
+## Without Python
 
-Scriptul `check_ssot.py` e un strat opțional. Fără el, adaugă în instrucțiunile Verificatorului pasul: „pentru fiecare rând, caută citatul pe linia citată și spune dacă apare întocmai". Un model poate face asta, dar nu determinist, deci rulează de două ori și compară.
+`check_ssot.py` is an optional layer. Without it, add this step to the Verifier's instructions: "for each row, look for the quote on the cited line and say whether it appears verbatim". A model can do this, but not deterministically, so run it twice and compare.
