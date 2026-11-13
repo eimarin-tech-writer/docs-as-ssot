@@ -1,0 +1,9 @@
+# Facilitator material: not published (contains the exercise answer keys)
+facilitator/
+
+# Participants' real sources: never uploaded
+project/raw/*
+!project/raw/nimbus-meeting.txt
+
+__pycache__/
+.DS_Store
