@@ -8,8 +8,18 @@ Before you build anything, you prove you have the environment and that you under
 
 ## Steps
 
-1. Clone the repo and open the folder.
-2. Run:
+1. Clone the repo and open the folder. In a terminal:
+   ```
+   cd ~/Documents
+   git clone https://github.com/eimarin-tech-writer/docs-as-ssot.git
+   cd docs-as-ssot
+   ```
+
+   **Something missing?**
+   - No git → on the repo page on GitHub, choose **Code > Download ZIP**, unzip it, and open the `docs-as-ssot-main` folder in a terminal.
+   - On Windows → run the same commands in PowerShell. In step 2, if `python3` is not found, try `python` or `py` instead.
+   - No AI model installed on your computer → you don't need one. This exercise uses no AI, and the later ones work in any AI chat in the browser (see `docs/tools.md`).
+2. Run the checker from the repo root:
    ```
    python3 tools/check_ssot.py project/docs/ssot.example.md project/raw/nimbus-meeting.txt
    ```
